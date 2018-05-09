@@ -54,16 +54,20 @@ public class birthdayActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month += 1;
-                 date = dayOfMonth + "/" + month  + "/" + year ;
+//                 date = dayOfMonth + "/" + month  + "/" + year ;
+                    date = year +"-"+month+"-"+dayOfMonth;
                 mText.setText(date);
             }
         };
 
-        db = Room.databaseBuilder(getApplicationContext(),birthdayDB.class, "mydb4.db").allowMainThreadQueries().build();
+        db = Room.databaseBuilder(getApplicationContext(),birthdayDB.class, "mydb8.db").allowMainThreadQueries().build();
     }
 
     public void addtodb(View view) {
-       db.bdDao().insertAll(new birthdayEntity(Name.getText().toString(),this.date));
+        String check = mText.getText().toString();
+        if(check.equals("select date") || Name.getText().toString().equals(""))
+            return;
+       db.bdDao().insertAll(new birthdayEntity(Name.getText().toString(),mText.getText().toString()));
         }
 
     public void gotolist(View view) {

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Dao
 public interface birthdayDao {
-    @Query("SELECT * FROM birthdayentity ORDER BY date Desc")
+    @Query("SELECT * FROM birthdayentity ORDER BY SUBSTR(DATE('NOW'), 6)>SUBSTR(date, 6), SUBSTR(date, 6) DESC"   )
     List<birthdayEntity> getallbirthdate();
 
     @Insert

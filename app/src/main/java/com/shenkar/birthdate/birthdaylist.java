@@ -26,7 +26,7 @@ public class birthdaylist extends AppCompatActivity {
         setContentView(R.layout.activity_birthdaylist);
         mylist = findViewById(R.id.bdlist);
 
-        db = Room.databaseBuilder(getApplicationContext(),birthdayDB.class, "mydb4.db").allowMainThreadQueries().build();
+        db = Room.databaseBuilder(getApplicationContext(),birthdayDB.class, "mydb8.db").allowMainThreadQueries().build();
 
         List<birthdayEntity> birthDay = db.bdDao().getallbirthdate();
 

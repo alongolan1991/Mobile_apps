@@ -9,6 +9,7 @@ import android.text.format.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.StringTokenizer;
 
 @Entity
 public class birthdayEntity {
@@ -36,9 +37,19 @@ public class birthdayEntity {
     }
 
 
-    public String getDate(){
-        return this.date;
+    public String getDate() {
+
+        String year;
+        String month;
+        String day;
+        StringTokenizer st = new StringTokenizer(this.date,"-");
+            year = st.nextToken();
+            month = st.nextToken();
+            day = st.nextToken();
+
+            return day + "/" + month + "/" + year;
     }
+
 
     public void setDate(String date) {
         this.date = date;
