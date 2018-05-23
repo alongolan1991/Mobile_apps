@@ -17,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.shenkar.birthdate.birthdayActivity"></activity>
-        <activity android:name="com.shenkar.birthdate.birthdaylist"></activity>
+        <activity android:name="com.shenkar.birthdate.birthdayActivity" />
+        <activity android:name="com.shenkar.birthdate.birthdaylist" />
+        <activity android:name="com.shenkar.animation.AnimationActivity1"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.shenkar.animation.AnimationActivity1;
 import com.shenkar.birthdate.birthdayActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void move_to_birth(View view) {
         Intent intent = new Intent(this, birthdayActivity.class);
+        startActivity(intent);
+    }
+
+    public void move_to_anim(View view) {
+        Intent intent = new Intent(this, AnimationActivity1.class);
         startActivity(intent);
     }
 }
